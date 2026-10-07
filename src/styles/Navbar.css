@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg);
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+}
+
+/* Left side (Name/Brand) */
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: royalblue;
+}
+
+/* Right side (Links + Toggle) */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007acc; /* highlight color */
+}

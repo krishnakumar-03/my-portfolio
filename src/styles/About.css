@@ -1,0 +1,56 @@
+.about-container {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #007acc, #00aaff);
+  color: #ffffff;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.dark .about-container {
+  background: linear-gradient(135deg, #001f3f, #003366);
+}
+
+.about-card {
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideFadeUp 1s ease-out forwards;
+}
+
+.about-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Animation keyframes */
+@keyframes slideFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 1.5rem;
+  }
+}

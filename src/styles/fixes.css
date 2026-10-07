@@ -1,0 +1,49 @@
+/* Loaded last (see main.jsx). Fixes light-mode contrast and shared layout. */
+:root {
+  --card: rgba(0, 122, 204, 0.08);
+  --card-hover: rgba(0, 122, 204, 0.18);
+  --muted: #5a6572;
+}
+body.dark {
+  --card: rgba(255, 255, 255, 0.06);
+  --card-hover: rgba(0, 122, 204, 0.25);
+  --muted: #b5bcc6;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+section { scroll-margin-top: 4.5rem; }
+
+/* Cards were white-on-white in light mode */
+.education-card, .experience-card, .project-card, .skill-card,
+.cert-card, .contact-row { background-color: var(--card); }
+.education-card:hover, .experience-card:hover, .project-card:hover,
+.skill-card:hover, .cert-card:hover, .contact-row:hover { background-color: var(--card-hover); }
+body.dark .education-card, body.dark .experience-card, body.dark .project-card,
+body.dark .skill-card, body.dark .contact-row { background-color: var(--card); }
+body.dark .education-card:hover, body.dark .experience-card:hover,
+body.dark .project-card:hover, body.dark .skill-card:hover,
+body.dark .contact-row:hover { background-color: var(--card-hover); }
+
+/* Muted text was #ccc / #888 on white */
+.education-card span, .experience-card span, .cert-info p { color: var(--muted); }
+
+/* Certifications is now a section, not a full page */
+.certifications-page { min-height: auto; padding: 4rem 2rem; }
+.certifications-page h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; }
+.cert-info h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+/* Projects */
+.project-card { display: block; color: inherit; text-decoration: none; text-align: left; }
+.project-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 1rem 0 0; }
+.project-tags li { font-size: 0.8rem; padding: 0.2rem 0.65rem; border-radius: 999px; border: 1px solid #007acc; color: #007acc; }
+body.dark .project-tags li { color: #4db8ff; border-color: #4db8ff; }
+body.dark .contact-value a { color: #4db8ff; }
+
+a:focus-visible, button:focus-visible, .switch input:focus-visible + .slider { outline: 3px solid #00aaff; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .home-title, .home-subtitle, .home-button { opacity: 1 !important; }
+}
