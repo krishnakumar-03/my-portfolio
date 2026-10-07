@@ -9,7 +9,7 @@ function Home() {
       <section className="home-section">
         <div className="home-hero">
           <div className="home-text">
-            <h1 className="home-title">Hi, I’m KRISHNAKUMAR</h1>
+            <h1 className="home-title">Hi, I’m KRISHNA</h1>
             <p className="home-subtitle">
               Data Science Master's Student | Machine Learning | AI Enthusiast
             </p>
